@@ -4,10 +4,7 @@
 
 import { UTILS} from "../../utils/type";
 import { BrowserContext, BrowserContextOptions, CDPSession, chromium,Page} from 'playwright';
-<<<<<<< HEAD
 import path from 'path';
-=======
->>>>>>> 5a6865251dd6ed0704829055d962cb01ca6d4b26
 
 class TKLoginPage implements UTILS.AuthPage {
   config: UTILS.PageConfig;
@@ -32,7 +29,6 @@ class TKLoginPage implements UTILS.AuthPage {
   }
 
   static async create(config: UTILS.PageConfig): Promise<TKLoginPage> {
-<<<<<<< HEAD
     //const executablePath = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || 
     //path.join(process.resourcesPath, 'playwright', 'chromium', 'chrome.exe');
 
@@ -57,18 +53,8 @@ class TKLoginPage implements UTILS.AuthPage {
     deviceScaleFactor: 1,
     };
   
-=======
-    const browser = await chromium.launch({
-      headless: false
-      // args: ['--window-position=400,00'] // 设置窗口的初始位置
-    });
 
-    const configOpt: BrowserContextOptions = {};
-    if (config.proxy) {
-      configOpt.proxy = config.proxy;
-    }
->>>>>>> 5a6865251dd6ed0704829055d962cb01ca6d4b26
-
+ 
     // 创建新的浏览器上下文并设置代理
     const context = await browser.newContext(configOpt);
     const session = await browser.newBrowserCDPSession();
@@ -85,13 +71,9 @@ class TKLoginPage implements UTILS.AuthPage {
 
   async inputAuthInfo() {
     const page = this.page;
-<<<<<<< HEAD
     // await page.goto('https://www.youtube.com');
     await page.goto('http://myip.ipip.net');
-=======
-    await page.goto('https://www.youtube.com');
-    // await page.goto('http://myip.ipip.net');
->>>>>>> 5a6865251dd6ed0704829055d962cb01ca6d4b26
+
     // await page.goto('https://www.tiktok.com');
     // 拦截并处理特定的POST请求
 
