@@ -47,6 +47,7 @@
     "directories": {
       "output": "release/${version}"
     },
+<<<<<<< HEAD
     "extraResources": [
       {
         "from": "node_modules/@playwright/browser-chromium/chromium-*/chrome-win",
@@ -56,6 +57,8 @@
         ]
       }
     ],
+=======
+>>>>>>> 5a6865251dd6ed0704829055d962cb01ca6d4b26
     "win": {
       "target": [
         {
