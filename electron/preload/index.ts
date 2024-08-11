@@ -1,6 +1,15 @@
 import { ipcRenderer, contextBridge } from 'electron'
+import { chromium } from 'playwright'
+import _task from "../task";
 
 // --------- Expose some API to the Renderer process ---------
+contextBridge.exposeInMainWorld('task', {
+  run: async () => {
+    await _task()
+    // const browser = await chromium.launch()
+    // ... 其他操作
+  }
+})
 contextBridge.exposeInMainWorld('ipcRenderer', {
   on(...args: Parameters<typeof ipcRenderer.on>) {
     const [channel, listener] = args
