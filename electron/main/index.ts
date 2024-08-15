@@ -15,8 +15,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 
 // 设置 Playwright 使用打包的 Chromium
-const chromiumPath = chromium.executablePath();
-process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH = chromiumPath;
+
+const chromiumPath = app.isPackaged
+  ? path.join(process.resourcesPath, 'chrome-win', 'chrome.exe')
+  : chromium.executablePath();
+
+process.env.chromium_path = chromiumPath;
 
 // The built directory structure
 //
@@ -54,8 +58,8 @@ const preload = path.join(__dirname, '../preload/index.mjs')
 const indexHtml = path.join(RENDERER_DIST, 'index.html')
 
 async function createWindow() {
-  const executablePath = chromium.executablePath();
-  console.log('---',executablePath)
+  //const executablePath = chromium.executablePath();
+  //console.log('---',executablePath)
   win = new BrowserWindow({
     title: 'Main window',
     icon: path.join(process.env.VITE_PUBLIC, 'favicon.ico'),

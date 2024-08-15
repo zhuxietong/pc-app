@@ -4,7 +4,8 @@
 
 import { UTILS} from "../../utils/type";
 import { BrowserContext, BrowserContextOptions, CDPSession, chromium,Page} from 'playwright';
-import path from 'path';
+import getChromiumExecutablePath from "./chromium";
+
 
 class TKLoginPage implements UTILS.AuthPage {
   config: UTILS.PageConfig;
@@ -32,26 +33,21 @@ class TKLoginPage implements UTILS.AuthPage {
     //const executablePath = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || 
     //path.join(process.resourcesPath, 'playwright', 'chromium', 'chrome.exe');
 
-    const executablePath = path.join(process.resourcesPath, 'playwright', 'chromium', 'chrome.exe') || process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH;
+    //const executablePath = path.join(process.resourcesPath, 'playwright', 'chromium', 'chrome.exe') || process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH;
 
-    console.log('000000ss',executablePath);
+    //const executablePath = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH
+    //console.log('000000ss',executablePath);
+
+    const executablePath = getChromiumExecutablePath()
+    console.log('-----dd',executablePath);
     const browser = await chromium.launch({
       headless: false,
-      
+      executablePath
       // args: ['--window-position=400,00'] // 设置窗口的初始位置
     });
 
     const configOpt: BrowserContextOptions = {
-      hasTouch: false,
-    javaScriptEnabled: true,
-    ignoreHTTPSErrors: true,
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-    permissions: [],
-    geolocation: { longitude: 0, latitude: 0 },
-    colorScheme: 'light',
-    isMobile: true,
-    deviceScaleFactor: 1,
-    };
+    }
   
 
  
