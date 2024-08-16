@@ -1,5 +1,4 @@
-import { app } from 'electron';
-import * as path from 'path';
+
 import { chromium } from 'playwright';
 
 const isDev = process.env.NODE_ENV === 'development';

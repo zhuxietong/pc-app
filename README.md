@@ -1,5 +1,11 @@
 # electron-vite-vue
 
+
+```shell
+npm install --save-dev ts-node
+npm install uuid
+```
+
 🥳 Really simple `Electron` + `Vue` + `Vite` boilerplate.
 
 <!-- [![awesome-vite](https://awesome.re/mentioned-badge.svg)](https://github.com/vitejs/awesome-vite) -->

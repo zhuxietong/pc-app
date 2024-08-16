@@ -5,16 +5,17 @@
 <script setup lang="ts">
 
 // 在渲染进程的 TypeScript 文件中
+
 declare global {
   interface Window {
-    task: {
+    tk: {
       run: () => Promise<void>
     }
   }
 }
 
 async function runPlaywright() {
-  await window.task.run()
+  await window.tk.run()
   // ... 其他操作
 }
 

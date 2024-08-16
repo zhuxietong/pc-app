@@ -1,0 +1,37 @@
+{
+  "cookies": [
+    {
+      "name": "__uni__uid",
+      "value": "rBEQRGa/jSxLv6VBRZbwAg==",
+      "domain": ".dcloud.net.cn",
+      "path": "/",
+      "expires": 1758389548.151944,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "http://www.firstvar.com",
+      "localStorage": [
+        {
+          "name": "isReadPrivate",
+          "value": "true"
+        },
+        {
+          "name": "_User",
+          "value": "{\"token\":\"USERID eyJ1aWQiOjU0LCJ1dHlwZSI6InRlYWNoZXJfdXNlciJ9\",\"id\":54,\"username\":\"B0001\",\"info\":{\"uid\":54,\"username\":\"B0001\",\"realname\":\"沈腾\",\"avatar\":\"\",\"utype\":\"teacher_user\",\"sysutype\":\"\",\"ugroup\":\"school\",\"org_id\":50,\"school_id\":50,\"porg\":0,\"org\":[50],\"access\":[\"app\",\"mobile_trouble\",\"mobile_trouble_add\",\"mobile_accident\",\"mobile_accident_submit\",\"mobile_special_inspection\",\"mobile_special_inspection_submit\",\"mobile_warning\",\"mobile_warning_report\",\"mobile_news\",\"mobile_routing_inspection\",\"mobile_interaction\",\"mobile_news_home_recommended\"],\"subSchool\":[],\"role_id\":137}}"
+        },
+        {
+          "name": "__DC_STAT_UUID",
+          "value": "17238295453881500503"
+        },
+        {
+          "name": "access",
+          "value": "[\"app\",\"mobile_trouble\",\"mobile_trouble_add\",\"mobile_accident\",\"mobile_accident_submit\",\"mobile_special_inspection\",\"mobile_special_inspection_submit\",\"mobile_warning\",\"mobile_warning_report\",\"mobile_news\",\"mobile_routing_inspection\",\"mobile_interaction\",\"mobile_news_home_recommended\"]"
+        }
+      ]
+    }
+  ]
+}

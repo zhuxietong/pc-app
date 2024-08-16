@@ -1,11 +1,10 @@
 import { ipcRenderer, contextBridge } from 'electron'
-import { chromium } from 'playwright'
-import _task from "../task";
-
+import openTk from "../task/tiktok";
+// import { chromium } from 'playwright'
 // --------- Expose some API to the Renderer process ---------
-contextBridge.exposeInMainWorld('task', {
+contextBridge.exposeInMainWorld('tk', {
   run: async () => {
-    await _task()
+    await openTk()
     // const browser = await chromium.launch()
     // ... 其他操作
   }

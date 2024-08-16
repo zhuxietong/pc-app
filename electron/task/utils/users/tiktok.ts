@@ -4,8 +4,7 @@
  * @date: 2024/7/30
  * @copyright
  */
-import { UTILS } from '../type';
-const TKUsers: UTILS.PageConfig[] = [
+const TKUsers = [
   {
     auth: { username: 'oozymoo@gmail.com', password: 'ME.com1122' },
     proxy: {

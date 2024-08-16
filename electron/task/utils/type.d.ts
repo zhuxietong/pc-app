@@ -26,8 +26,7 @@
  * @author ztx
  * @copyright
  */
-import { Page } from '@playwright';
-import { BrowserContext, CDPSession } from 'playwright';
+import { BrowserContext, CDPSession,type Page } from 'playwright';
 
 declare namespace UTILS {
   /**
